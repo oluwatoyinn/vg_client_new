@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Data from "../utils/Data";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import { Button, Grid } from "@mui/material";
 
 const ContactUs = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="container mx-auto pb-6">
       <div className="flex flex-row ">
@@ -21,9 +29,50 @@ const ContactUs = () => {
           );
         })}
       </div>
-      <div className="flex flex-col mx-auto w-3/4 bg-red-300 h-96 -mt-16 rounded-md">
+      <div className="flex flex-col mx-auto w-3/4 bg-red-300 h-auto -mt-16 rounded-md space-y-5 pb-10">
         <div className="py-28 mx-auto">
           <h3 className="text-5xl font-bold text-white"> Contact Us</h3>
+        </div>
+        <div className="w-3/4 mx-auto">
+          <Grid container spacing={2}>
+            <Grid item sm={6}>
+              <TextField
+                id="outlined-basic"
+                label="Full Name"
+                variant="standard"
+                fullWidth
+              />
+            </Grid>
+            <Grid item sm={6}>
+              <TextField
+                id="filled-basic"
+                variant="standard"
+                label="Email"
+                fullWidth
+              />
+            </Grid>
+            <Grid item sm={12}>
+              <TextField
+                id="standard-multiline-static"
+                label="Company Name "
+                multiline
+                rows={2}
+                variant="standard"
+                fullWidth
+              />
+            </Grid>
+            <Grid item sm={12}>
+              <TextField
+                id="standard-multiline-static"
+                label="Message "
+                multiline
+                rows={4}
+                variant="standard"
+                fullWidth
+              />
+            </Grid>
+            <Button variant="outlined" color="secondary" style={{marginTop:'15px'}}>Send Message</Button>
+          </Grid>
         </div>
       </div>
     </div>
