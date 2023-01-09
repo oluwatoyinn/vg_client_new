@@ -12,7 +12,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <div>
-      <section id="footer" className="bg-red-500">
+      <section id="footer" className="bg-red-500 md:px-28">
         <div className="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0">
           <h2 className="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
             Need to speak with a consultant ?
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <div className="bg-gray-900">
+      <div className="bg-gray-900 md:px-28">
         <div className="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
           <div>
             <h2 className="text-center text-white text-3xl pb-3">Contact Us</h2>
