@@ -12,7 +12,7 @@ const ContactUs = () => {
 
   return (
     <div className="container mx-auto pb-6">
-      <div className="flex flex-row ">
+      <div className="flex flex-row">
         {Data.contactUsData.map((address) => {
           return (
             <div className="container flex flex-col space-y-3 mx-auto w-80 h-80 bg-red-400">
