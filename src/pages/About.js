@@ -4,13 +4,13 @@ import Data from "../utils/Data";
 const About = () => {
   return (
     <div className="container mx-auto md:px-28 pb-10">
-      <h4 className="font-bold text-5xl uppercase text-center mb-6 dark:text-gray-500">
+      <h4 className="font-bold md:text-5xl text-3xl uppercase text-center mb-6 dark:text-gray-500">
         About the company
       </h4>
       <div className="grid grid-cols-2 gap-12 mt-8">
         <div className="flex flex-col">
           <div>
-            <h3 className="font-bold text-2xl uppercase text-center mb-6 dark:text-gray-500">
+            <h3 className="font-bold md:text-2xl text-xl uppercase text-center mb-6 dark:text-gray-500">
               Vision
             </h3>
             <p className="text-center dark:text-gray-500">
@@ -20,7 +20,7 @@ const About = () => {
             </p>
           </div>
           <div className="mt-6 mb-6">
-            <h3 className="font-bold text-2xl uppercase text-center mb-6 dark:text-gray-500">
+            <h3 className="font-bold md:text-2xl text-xl uppercase text-center mb-6 dark:text-gray-500">
               Mission
             </h3>
             <p className="text-center dark:text-gray-500">
@@ -29,7 +29,7 @@ const About = () => {
           </div>
         </div>
         <div className="">
-          <h3 className="font-bold text-2xl uppercase text-center mb-6 dark:text-gray-500">
+          <h3 className="font-bold md:text-2xl text-base uppercase text-center mb-6 dark:text-gray-500">
             Our core values
           </h3>
           <div className="grid md:grid-cols-2">

@@ -356,6 +356,88 @@ const Data = {
       message: "Reliable",
     },
   ],
+  services: [
+    {
+      id: "01",
+      message: "Business Development advisory services",
+    },
+    {
+      id: "02",
+      message: "Tax Planning",
+    },
+    {
+      id: "03",
+      message: "Consulting Services",
+    },
+    {
+      id: "04",
+      message: "Branding and Product Development",
+    },
+    {
+      id: "05",
+      message: "Training",
+    },
+    {
+      id: "06",
+      message: "Business Reconstruction",
+    },
+    {
+      id: "07",
+      message: "Business Continuity Plan",
+    },
+    {
+      id: "08",
+      message: "Corporate governance structuring",
+    },
+  ],
+  servicesLink: [
+    {
+      name: "Services",
+      submenu: true,
+      sublinks: [
+        {
+          id: "1",
+          message: "Business Development advisory services",
+          url: "/advisory",
+        },
+        {
+          id: "2",
+          message: "Tax Planning",
+          url: "/tax",
+        },
+        {
+          id: "3",
+          message: "Consulting Services",
+          url: "/consulting",
+        },
+        {
+          id: "4",
+          message: "Branding and Product Development",
+          url: "/branding",
+        },
+        {
+          id: "5",
+          message: "Training",
+          url: "/training",
+        },
+        {
+          id: "6",
+          message: "Business Reconstruction",
+          url: "/reconstruction",
+        },
+        {
+          id: "7",
+          message: "Business Continuity Plan",
+          url: "/continuity",
+        },
+        {
+          id: "8",
+          message: "Corporate governance structuring",
+          url: "/governance",
+        },
+      ],
+    },
+  ],
 };
 
 export default Data;

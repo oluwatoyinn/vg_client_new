@@ -7,10 +7,10 @@ const TaxPlanning = () => {
   return (
     <div className="container mx-auto md:px-28">
       <div className="flex flex-col mx-auto">
-        <h4 className="font-bold text-5xl uppercase text-center mb-6 dark:text-gray-500">
+        <h4 className="font-bold md:text-5xl text-3xl uppercase text-center mb-6 dark:text-gray-500">
           tax planning
         </h4>
-        <p className="mx-auto text-lg text-center mb-6 text-gray-500 dark:text-gray-500 md:text-base">
+        <p className="mx-auto text-lg md:text-center text-justify p-3 mb-6 text-gray-500 dark:text-gray-500 md:text-base">
           We assist businesses, individuals and organizations with tax strategy,
           planning, and compliance through a careful and deliberate structuring
           of the company’s activities we provide advice on tax planning with an
@@ -39,23 +39,23 @@ const TaxPlanning = () => {
             <h2 className="uppercase space-x-7 mb-4 text-2xl font-bold dark:text-gray-500">
               Tax Planning
             </h2>
-            <p className="text-lg mb-6 text-gray-500 md:text-base">
+            <p className="text-lg mb-6 text-gray-500 md:text-justify md:text-base">
               We deliver deep knowledge of tax and statutory requirements as
               well as a breadth of experience applying them in practice
               worldwide and offer clients a wide range of fully integrated tax
               services.
             </p>
-            <p className="text-lg mb-6 text-gray-500 md:text-base">
+            <p className="text-lg mb-6 text-gray-500 md:text-justify md:text-base">
               Our approach combines insight and innovation from multiple
               disciplines with business and industry knowledge to help your
               company excel globally.
             </p>
-            <p className="text-lg mb-6 text-gray-500 md:text-base">
+            <p className="text-lg mb-6 text-gray-500 md:text-justify md:text-base">
               We use the depth of our knowledge and wealth of our involvement
               and proficiency to identify possible substitutes where necessary
               to ensure utmost tax efficiency in your business.
             </p>
-            <p className="text-lg mb-6 text-gray-500 md:text-base">
+            <p className="text-lg mb-6 text-gray-500 md:text-justify md:text-base">
               We render the following tax services to our clients:
             </p>
             <div>

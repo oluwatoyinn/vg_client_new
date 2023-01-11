@@ -11,7 +11,8 @@ body {
 
 @layer components {
   .nav-items {
-    @apply hover:text-red-400 hover:border-b-2 hover:border-red-500 text-base;
+    @apply hover:text-red-400 hover:border-b-2 hover:border-red-500 text-base cursor-pointer;
+    /* @apply before:w-full before:h-80 before:bg-red-400 before:left-0 before:-bottom-5 before:rounded-b-lg */
   }
 
   .service-items {
@@ -19,18 +20,36 @@ body {
   }
 
   .mobile_menu {
-    @apply absolute flex flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-lg rounded-md dark:bg-gray-700 border-4;
+    @apply absolute 
+    flex flex-col self-end 
+    py-8 space-y-3 pl-3
+    font-bold bg-white
+   drop-shadow-lg 
+    border-2
+   dark:bg-gray-700 
+    w-full
   }
 
-  .timeline{
-    @apply 
-      border-l-4 border-gray-200
+  /* .mobile_menu {
+    @apply absolute flex 
+    flex-col self-end 
+    py-8 mt-10 space-y-6 
+    font-bold bg-white 
+    sm:w-auto sm:self-center 
+    left-6 right-6 drop-shadow-lg 
+    rounded-md
+    border-4
+   dark:bg-gray-700 
+  } */
+
+  .timeline {
+    @apply border-l-4 border-gray-200
       ml-3 mt-3 py-5
-      space-y-14
+      space-y-14;
   }
 
-  .dot{
-    @apply top-5 bg-red-500 h-9 w-9 rounded-full border-4 border-white
+  .dot {
+    @apply top-5 bg-red-500 h-9 w-9 rounded-full border-4 border-white;
   }
 }
 
