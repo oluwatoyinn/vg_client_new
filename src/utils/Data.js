@@ -438,6 +438,24 @@ const Data = {
       ],
     },
   ],
+  blogData:[
+    {
+      id:'01',
+      message:'Message one'
+    },
+    {
+      id:'02',
+      message:'Mesage two'
+    },
+    {
+      id:'03',
+      message:'message three'
+    },
+    {
+      id:'04',
+      message:'Message four'
+    },
+  ]
 };
 
 export default Data;

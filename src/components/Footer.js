@@ -29,19 +29,6 @@ const Footer = () => {
       </section>
       <div className="bg-gray-900 md:px-28">
         <div className="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
-          {/* <div>
-            <h2 className="text-center text-white text-3xl pb-3">Contact Us</h2>
-            {Data.contactAddress.map((item) => {
-              return (
-                <div key={item.id} className="flex justify-between text-center">
-                  <h3 className="text-white px-6 space-y-2 pt-3 text-clip">
-                    {item.title}
-                  </h3>
-                </div>
-              );
-            })}
-          </div> */}
-
           <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
             <div className="mx-auto my-6 text-center text-white md:hidden">
               Copyright &copy; {year} All right reserved
@@ -99,6 +86,7 @@ const Footer = () => {
               <Link to="/contact" className="nav-items">
                 Contact Us
               </Link>
+            {/* <link >Testing</link> */}
             </div>
           </div>
           <div className="flex flex-col justify-between">
