@@ -27,8 +27,11 @@ const Footer = () => {
           </div>
         </div>
       </section>
+      {/* background */}
       <div className="bg-gray-900 md:px-28">
+        {/* flex container */}
         <div className="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+          {/* flex 1 */}
           <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
             <div className="mx-auto my-6 text-center text-white md:hidden">
               Copyright &copy; {year} All right reserved
@@ -55,7 +58,8 @@ const Footer = () => {
             </div>
           </div>
           {/* list */}
-          <div className="flex justify-around space-x-14">
+          {/* flex 2 */}
+          <div className="flex justify-around gap-4">
             <div>
               <h2 className="text-center text-white text-3xl pb-3">
                 Contact Us
@@ -75,20 +79,24 @@ const Footer = () => {
             </div>
             <div className="flex flex-col space-y-3 text-white">
               <Link to="/about" className="nav-items">
-                About Us
+                About
               </Link>
-              {/* <Link to="/services" className="nav-items">
-                Services
-              </Link> */}
               <Link to="/blog" className="nav-items">
                 Blog
               </Link>
               <Link to="/contact" className="nav-items">
-                Contact Us
+                Contact
+              </Link>
+              <Link to="/" className="nav-items">
+                Home
+              </Link>
+              <Link to="/services" className="nav-items">
+                Services
               </Link>
             {/* <link >Testing</link> */}
             </div>
           </div>
+          {/* flex 3 */}
           <div className="flex flex-col justify-between">
             <form>
               <div className="flex space-x-3">

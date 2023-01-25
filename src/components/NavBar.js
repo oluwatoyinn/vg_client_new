@@ -86,7 +86,7 @@ const NavBar = () => {
             // onMouseEnter={handleOpen}
             // onMouseLeave={handleClose}
             onClick={handleOpen}
-            className="block hamburger md:hidden focus:outline-none"
+            className="block hamburger md:hidden focus:outline-none mr-3"
           >
             <HarmburgerIcon />
           </button>
