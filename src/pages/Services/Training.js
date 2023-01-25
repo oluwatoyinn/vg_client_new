@@ -7,7 +7,7 @@ const Training = () => {
   return (
     <div className="container mx-auto md:px-28">
       <div className="flex flex-col mx-auto">
-        <h4 className="font-bold text-5xl uppercase text-center mb-6 dark:text-gray-500">
+        <h4 className="font-bold md:text-5xl text-4xl uppercase text-center mb-6 dark:text-gray-500">
           training
         </h4>
         <p className="mx-auto text-lg text-center mb-6 text-gray-500 dark:text-gray-500 md:text-base">

@@ -7,7 +7,7 @@ const BrandingProductDev = () => {
   return (
     <div className="container mx-auto md:px-28">
       <div className="flex flex-col mx-auto">
-        <h4 className="font-bold text-5xl uppercase text-center mb-6 dark:text-gray-500">
+        <h4 className="font-bold md:text-5xl text-3xl uppercase text-center mb-6 dark:text-gray-500">
           branding and product development
         </h4>
         <p className="mx-auto text-lg text-center mb-6 text-gray-500 dark:text-gray-500 md:text-base">
@@ -34,7 +34,7 @@ const BrandingProductDev = () => {
             Services
           </h3>
           <div className="dark:text-gray-500">
-            <h2 className="uppercase space-x-7 mb-4 text-2xl font-bold dark:text-gray-500">
+            <h2 className="uppercase space-x-7 mb-4 md:text-2xl font-bold dark:text-gray-500">
               branding and product development
             </h2>
             <p className="text-lg mb-6 text-gray-500 md:text-base">

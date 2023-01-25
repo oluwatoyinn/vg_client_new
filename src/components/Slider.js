@@ -22,7 +22,7 @@ const Slider = () => {
               <div className="flex justify-center md:justify-start">
                 <Link
                   to="/contact"
-                  className="p-3 px-6 pt-2 text-white rounded-full hover:bg-white hover:text-black bg-red-500"
+                  className="p-3 px-6 pt-2 text-white rounded-full hover:bg-red-300 hover:text-black bg-red-500 dark:hover:bg-white"
                 >
                   Contact Us
                 </Link>

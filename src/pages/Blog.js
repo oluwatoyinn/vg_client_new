@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Data from "../utils/Data";
 
 const Blog = () => {
   return (
-    <div>
-      Blogs
+    <div className="container mx-auto">
+      {Data.blogData.map((item) => {
+        return <div className="flex gap-5 dark:text-gray-500">{item.message}</div>;
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

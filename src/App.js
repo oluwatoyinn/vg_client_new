@@ -15,6 +15,7 @@ import ConsultingServices from "./pages/Services/ConsultingServices";
 import CorporateGovernance from "./pages/Services/CorporateGovernance";
 import TaxPlanning from "./pages/Services/TaxPlanning";
 import Training from "./pages/Services/Training";
+import Schedule from "./pages/Schedule";
 
 function App() {
   return (
@@ -22,18 +23,19 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<OurServies />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/branding" element={<BrandingProductDev />} />
-        <Route path="/advisory" element={<BusinessAdvisory />} />
-        <Route path="/continuity" element={<BusinessContinuity />} />
-        <Route path="/reconstruction" element={<BusinessReconstruction />} />
-        <Route path="/consulting" element={<ConsultingServices />} />
-        <Route path="/governance" element={<CorporateGovernance />} />
+        <Route path="/about" element={<About />} />
         <Route path="/tax" element={<TaxPlanning />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/schedule" element={<Schedule />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/services" element={<OurServies />} />
+        <Route path="/advisory" element={<BusinessAdvisory />} />
+        <Route path="/branding" element={<BrandingProductDev />} />
+        <Route path="/consulting" element={<ConsultingServices />} />
+        <Route path="/continuity" element={<BusinessContinuity />} />
+        <Route path="/governance" element={<CorporateGovernance />} />
+        <Route path="/reconstruction" element={<BusinessReconstruction />} />
       </Routes>
       <Footer />
     </div>

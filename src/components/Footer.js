@@ -14,12 +14,12 @@ const Footer = () => {
     <div>
       <section id="footer" className="bg-red-500 md:px-28">
         <div className="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0">
-          <h2 className="text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
+          <h2 className="md:text-4xl font-bold leading-tight text-center text-2xl text-white md:max-w-xl md:text-left">
             Need to speak with a consultant ?
           </h2>
           <div className="flex justify-center md:justify-start pt-6">
             <Link
-              to="/register"
+              to="/contact"
               className="p-1 px-6 pt-2 text-red-500 rounded-full bg-white shadow-2xl hover:bg-gray-300 hover:text-black"
             >
               Contact Us
@@ -27,26 +27,11 @@ const Footer = () => {
           </div>
         </div>
       </section>
+      {/* background */}
       <div className="bg-gray-900 md:px-28">
+        {/* flex container */}
         <div className="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
-          <div>
-            <h2 className="text-center text-white text-3xl pb-3">Contact Us</h2>
-            {Data.contactAddress.map((item) => {
-              return (
-                <div key={item.id} className="flex justify-between text-center">
-                  {/* <img
-                    className="w-12 h-10 flex-1"
-                    src={item.img}
-                    alt="address"
-                  /> */}
-                  <h3 className="text-white px-6 space-y-2 pt-3 text-clip">
-                    {item.title}
-                  </h3>
-                </div>
-              );
-            })}
-          </div>
-
+          {/* flex 1 */}
           <div className="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
             <div className="mx-auto my-6 text-center text-white md:hidden">
               Copyright &copy; {year} All right reserved
@@ -73,28 +58,45 @@ const Footer = () => {
             </div>
           </div>
           {/* list */}
-          <div className="flex justify-around space-x-32">
+          {/* flex 2 */}
+          <div className="flex justify-around gap-4">
+            <div>
+              <h2 className="text-center text-white text-3xl pb-3">
+                Contact Us
+              </h2>
+              {Data.contactAddress.map((item) => {
+                return (
+                  <div
+                    key={item.id}
+                    className="flex justify-between text-center"
+                  >
+                    <h3 className="text-white px-6 space-y-2 pt-3 text-clip">
+                      {item.title}
+                    </h3>
+                  </div>
+                );
+              })}
+            </div>
             <div className="flex flex-col space-y-3 text-white">
-              <Link to="/" className="nav-items">
-                Home
+              <Link to="/about" className="nav-items">
+                About
+              </Link>
+              <Link to="/blog" className="nav-items">
+                Blog
+              </Link>
+              <Link to="/contact" className="nav-items">
+                Contact
               </Link>
               <Link to="/" className="nav-items">
-                About Us
+                Home
               </Link>
               <Link to="/services" className="nav-items">
                 Services
               </Link>
-              <Link to="blog" className="nav-items">
-                Blog
-              </Link>
-              <Link to="contact" className="nav-items">
-                Contact Us
-              </Link>
+            {/* <link >Testing</link> */}
             </div>
-            {/* <div className="flex flex-col space-y-3 text-white">
-             
-            </div> */}
           </div>
+          {/* flex 3 */}
           <div className="flex flex-col justify-between">
             <form>
               <div className="flex space-x-3">

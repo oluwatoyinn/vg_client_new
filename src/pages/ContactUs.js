@@ -1,21 +1,19 @@
 import React, { useEffect } from "react";
 import Data from "../utils/Data";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Grid } from "@mui/material";
 
 const ContactUs = () => {
-
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto pb-6">
-      <div className="flex flex-row">
+      <div className="md:flex flex-row">
         {Data.contactUsData.map((address) => {
           return (
-            <div className="container flex flex-col space-y-3 mx-auto w-80 h-80 bg-red-400">
+            <div className="container md:flex flex-col space-y-3 mb-3 mx-auto w-80 h-80 bg-red-400 rounded-md">
               <div className="flex flex-col mx-auto px-6 py-6">
                 <span className="mx-auto text-white">{address.icon}</span>
                 <h3 className="mx-auto font-bold uppercase py-8 text-white">
@@ -31,7 +29,7 @@ const ContactUs = () => {
       </div>
       <div className="flex flex-col mx-auto w-3/4 bg-red-300 h-auto -mt-16 rounded-md space-y-5 pb-10">
         <div className="py-28 mx-auto">
-          <h3 className="text-5xl font-bold text-white"> Contact Us</h3>
+          <h3 className="md:text-5xl font-bold text-white text-3xl"> Contact Us</h3>
         </div>
         <div className="w-3/4 mx-auto">
           <Grid container spacing={2}>
@@ -71,7 +69,15 @@ const ContactUs = () => {
                 fullWidth
               />
             </Grid>
-            <Button variant="outlined" color="secondary" style={{marginTop:'15px'}}>Send Message</Button>
+            <Grid item sm={6}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                style={{ marginTop: "15px" }}
+              >
+                Send Message
+              </Button>
+            </Grid>
           </Grid>
         </div>
       </div>
