@@ -438,24 +438,66 @@ const Data = {
       ],
     },
   ],
-  blogData:[
+  blogData: [
     {
-      id:'01',
-      message:'Message one'
+      id: "01",
+      message: "Message one",
     },
     {
-      id:'02',
-      message:'Mesage two'
+      id: "02",
+      message: "Mesage two",
     },
     {
-      id:'03',
-      message:'message three'
+      id: "03",
+      message: "message three",
     },
     {
-      id:'04',
-      message:'Message four'
+      id: "04",
+      message: "Message four",
     },
-  ]
+  ],
+  servicesMenu: [
+    {
+      id: 1,
+      value: "Business Development Advisory Services",
+      label: "Business Development Advisory Services",
+    },
+    {
+      id: 2,
+      value: "Tax Planning",
+      label: "Tax Planning",
+    },
+    {
+      id: 3,
+      value: "Consulting services",
+      label: "Consulting services",
+    },
+    {
+      id: 4,
+      value: "Branding and Product Development",
+      label: "Branding and Product Development",
+    },
+    {
+      id: 5,
+      value: "Training",
+      label: "Training",
+    },
+    {
+      id: 6,
+      value: "Business Reconstruction",
+      label: "Business Reconstruction",
+    },
+    {
+      id: 7,
+      value: "Business Continuity Plan",
+      label: "Business Continuity Plan",
+    },
+    {
+      id:8,
+      value:'Corporate Governance Structuring',
+      label:'Corporate Governance Structuring'
+    }
+  ],
 };
 
 export default Data;

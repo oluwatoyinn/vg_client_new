@@ -37,7 +37,7 @@ const NavBar = () => {
               About Us
             </Link>
             {Data.servicesLink.map((link) => (
-              <div>
+              <div key={link.name}>
                 <div className=" px-3 group">
                   <h1 className="nav-items">{link.name}</h1>
                   {link.submenu && (
@@ -101,7 +101,7 @@ const NavBar = () => {
                 About Us
               </Link>
               {Data.servicesLink.map((link) => (
-                <div>
+                <div key={link.name}>
                   <div className="group">
                     <h1
                       className="nav-items"
