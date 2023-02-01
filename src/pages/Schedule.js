@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-import { Button, Grid } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
 import Data from "../utils/Data";
 
 const Schedule = () => {
+  const [inputs, setInputs] = useState({});
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInputs((values) => ({ ...values, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ inputs });
+  };
+
+  const { firstName, lastName, email, company, message, phoneNumber, service } =
+    inputs;
+
   return (
     <div className="container mx-auto md:px-28">
       <h4 className="font-bold text-5xl uppercase text-center mt-10 mb-2 dark:text-gray-500">
@@ -30,7 +52,10 @@ const Schedule = () => {
           <div>
             {Data.services.map((schedule) => {
               return (
-                <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row pb-4">
+                <div
+                  key={schedule.id}
+                  className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row pb-4"
+                >
                   <div className="rounded-l-full bg-red-200 md:bg-transparent">
                     <div className="flex items-center space-x-2">
                       <div className="px-4 py-2 text-white rounded-full md:py-1 bg-red-500">
@@ -47,69 +72,115 @@ const Schedule = () => {
           </div>
         </div>
         <div className="bg-red-300 p-5 mb-5 rounded-l-lg mx-auto basis-1/2 md:text-gray-500">
-          <Grid container spacing={2}>
-            <Grid item sm={12}>
-              <TextField
-                id="outlined-basic"
-                label="First Name"
-                variant="standard"
-                fullWidth
-              />
+          <form onSubmit={handleSubmit}>
+            <Grid container spacing={2}>
+              <Grid item sm={12}>
+                <TextField
+                  name="firstName"
+                  value={firstName}
+                  onChange={handleInputChange}
+                  id="outlined-basic"
+                  label="First Name"
+                  variant="standard"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item sm={12}>
+                <TextField
+                  value={lastName}
+                  onChange={handleInputChange}
+                  name="lastName"
+                  id="filled-basic"
+                  variant="standard"
+                  label="Last Name"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item sm={12}>
+                <TextField
+                  value={email}
+                  onChange={handleInputChange}
+                  name="email"
+                  id="filled-basic"
+                  variant="standard"
+                  label="Email"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item sm={12}>
+                <TextField
+                  value={phoneNumber}
+                  onChange={handleInputChange}
+                  name="phoneNumber"
+                  id="filled-basic"
+                  variant="standard"
+                  label="Phone Number"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item sm={12}>
+                <TextField
+                  value={company}
+                  onChange={handleInputChange}
+                  name="company"
+                  id="standard-multiline-static"
+                  label="Company Name "
+                  multiline
+                  rows={2}
+                  variant="standard"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item sm={12}>
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">
+                    Service Required
+                  </InputLabel>
+                  <Select
+                    name="services"
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={service}
+                    label="Service Required"
+                    onChange={handleInputChange}
+                    variant="standard"
+                  >
+                    {Data.servicesMenu.map((item) => {
+                      return (
+                        <MenuItem key={item.id} value={item.value}>
+                          {item.label}
+                        </MenuItem>
+                      );
+                    })}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item sm={12}>
+                <TextField
+                  value={message}
+                  onChange={handleInputChange}
+                  name="message"
+                  id="standard-multiline-static"
+                  label="Message "
+                  multiline
+                  rows={4}
+                  variant="standard"
+                  fullWidth
+                />
+              </Grid>
+              <Grid item sm={6}>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  style={{ marginTop: "15px" }}
+                  type="submit"
+                  onClick={handleSubmit}
+                >
+                  Send Message
+                </Button>
+              </Grid>
             </Grid>
-            <Grid item sm={12}>
-              <TextField
-                id="filled-basic"
-                variant="standard"
-                label="Last Name"
-                fullWidth
-              />
-            </Grid>
-            <Grid item sm={12}>
-              <TextField
-                id="filled-basic"
-                variant="standard"
-                label="Email"
-                fullWidth
-              />
-            </Grid>
-            <Grid item sm={12}>
-              <TextField
-                id="filled-basic"
-                variant="standard"
-                label="Phone Number"
-                fullWidth
-              />
-            </Grid>
-            <Grid item sm={12}>
-              <TextField
-                id="standard-multiline-static"
-                label="Company Name "
-                multiline
-                rows={2}
-                variant="standard"
-                fullWidth
-              />
-            </Grid>
-            <Grid item sm={12}>
-              <TextField
-                id="standard-multiline-static"
-                label="Message "
-                multiline
-                rows={4}
-                variant="standard"
-                fullWidth
-              />
-            </Grid>
-            <Grid item sm={6}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                style={{ marginTop: "15px" }}
-              >
-                Send Message
-              </Button>
-            </Grid>
-          </Grid>
+          </form>
         </div>
       </div>
     </div>

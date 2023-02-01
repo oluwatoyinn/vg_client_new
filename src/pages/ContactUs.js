@@ -13,7 +13,7 @@ const ContactUs = () => {
       <div className="md:flex flex-row">
         {Data.contactUsData.map((address) => {
           return (
-            <div className="container md:flex flex-col space-y-3 mb-3 mx-auto w-80 h-80 bg-red-400 rounded-md">
+            <div key={address.id} className="container md:flex flex-col space-y-3 mb-3 mx-auto w-80 h-80 bg-red-400 rounded-md">
               <div className="flex flex-col mx-auto px-6 py-6">
                 <span className="mx-auto text-white">{address.icon}</span>
                 <h3 className="mx-auto font-bold uppercase py-8 text-white">

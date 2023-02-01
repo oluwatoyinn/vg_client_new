@@ -1,4 +1,4 @@
-const Hamburger = () => {
+const MoonIcon = () => {
   return (
     <svg
       className="w-6 h-6"
@@ -11,10 +11,10 @@ const Hamburger = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
-        d="M4 6h16M4 12h16m-7 6h7"
+        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
       ></path>
     </svg>
   );
 };
 
-export default Hamburger;
+export default MoonIcon;
