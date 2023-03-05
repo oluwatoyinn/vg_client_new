@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import TextField from "@mui/material/TextField";
 import {
   Button,
@@ -9,8 +9,10 @@ import {
   Select,
 } from "@mui/material";
 import Data from "../utils/Data";
+import emailjs from "@emailjs/browser";
 
 const Schedule = () => {
+  const form = useRef();
   const [inputs, setInputs] = useState({});
 
   const handleInputChange = (e) => {
@@ -20,11 +22,26 @@ const Schedule = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ inputs });
+
+    emailjs
+      .sendForm(
+        "service_j9v285t",
+        "template_fiyfyhvkskal",
+        form.current,
+        "TFzu2V_nXlY98a8NX"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setInputs("");
   };
 
-  const { firstName, lastName, email, company, message, phoneNumber, service } =
-    inputs;
+  const { name, email, company, message, phoneNumber, service } = inputs;
 
   return (
     <div className="container mx-auto md:px-28">
@@ -72,20 +89,20 @@ const Schedule = () => {
           </div>
         </div>
         <div className="bg-red-300 p-5 mb-5 rounded-l-lg mx-auto basis-1/2 md:text-gray-500">
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={handleSubmit}>
             <Grid container spacing={2}>
               <Grid item sm={12}>
                 <TextField
-                  name="firstName"
-                  value={firstName}
+                  name="name"
+                  value={name}
                   onChange={handleInputChange}
                   id="outlined-basic"
-                  label="First Name"
+                  label="Name"
                   variant="standard"
                   fullWidth
                 />
               </Grid>
-              <Grid item sm={12}>
+              {/* <Grid item sm={12}>
                 <TextField
                   value={lastName}
                   onChange={handleInputChange}
@@ -95,7 +112,7 @@ const Schedule = () => {
                   label="Last Name"
                   fullWidth
                 />
-              </Grid>
+              </Grid> */}
               <Grid item sm={12}>
                 <TextField
                   value={email}
@@ -137,7 +154,7 @@ const Schedule = () => {
                     Service Required
                   </InputLabel>
                   <Select
-                    name="services"
+                    name="serviceNeeded"
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={service}

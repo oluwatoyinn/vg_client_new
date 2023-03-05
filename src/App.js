@@ -16,6 +16,7 @@ import CorporateGovernance from "./pages/Services/CorporateGovernance";
 import TaxPlanning from "./pages/Services/TaxPlanning";
 import Training from "./pages/Services/Training";
 import Schedule from "./pages/Schedule";
+import TestForm from "./pages/TestForm";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/tax" element={<TaxPlanning />} />
+        <Route path="/form" element={<TestForm />} />
         <Route path="/training" element={<Training />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/contact" element={<ContactUs />} />
