@@ -37,7 +37,8 @@ const Footer = () => {
               Copyright &copy; {year} All right reserved
             </div>
             <div>
-              <img src={companyLogo} alt="logo" className="w-28" />
+              <h3 className="text-white text-2xl">Ovatechs Media</h3>
+              {/* <img src={companyLogo} alt="logo" className="w-28" /> */}
             </div>
             <div className="flex justify-center space-x-4">
               <Link to="/whatsapp">

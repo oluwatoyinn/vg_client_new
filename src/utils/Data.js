@@ -77,17 +77,17 @@ const Data = {
     {
       id: 1,
       img: address,
-      title: "10 Benson Ojukwu Str. Okota Ago Lagos",
+      title: "10 Xyzxyz, John Doe Street, LAs",
     },
     {
       id: 2,
       img: email,
-      title: "contact@vgrconsultingltd.com",
+      title: "test@test.com",
     },
     {
       id: 3,
       img: call,
-      title: "(234) 803 345 9094",
+      title: "(029 302 199 022 002)",
     },
   ],
   contactUsData: [
